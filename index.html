@@ -1,1 +1,148 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Demos</title></head><body style="font-family:sans-serif;padding:40px"><h1>Website demos</h1><ul><li><a href="beeraki/">BeeRaki</a></li><li><a href="pites-tis-sofias/">Οι Πίτες της Σοφίας</a></li><li><a href="koureio-metaxas/">Κουρείον Μεταξάς</a></li></ul></body></html>
+<!DOCTYPE html>
+<html lang="el" data-lang="el">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kalimera Web · Ιστοσελίδες για μικρές επιχειρήσεις στην Αθήνα</title>
+<meta name="description" content="Δωρεάν δοκιμαστική ιστοσελίδα για μικρές επιχειρήσεις της Αθήνας. Ολοκληρωμένη ιστοσελίδα στα ελληνικά και αγγλικά με €250. Free demo website for Athens small businesses; finished site €250.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://iajaza22-stack.github.io/web-demos/">
+<meta property="og:title" content="Kalimera Web · Free demo website for your Athens business">
+<meta property="og:description" content="Δωρεάν δοκιμαστική ιστοσελίδα · Ολοκληρωμένη σελίδα €250">
+<meta property="og:type" content="website"><meta property="og:url" content="https://iajaza22-stack.github.io/web-demos/">
+<meta property="og:image" content="https://iajaza22-stack.github.io/web-demos/assets/beeraki.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16202b;--muted:#5b6877;--accent:#0f7b8a;--accent2:#f2a33a;--bg:#fbfaf7;--soft:#eef5f5}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+html[data-lang=el] [data-l=en],html[data-lang=en] [data-l=el]{display:none}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(251,250,247,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e7e4dc}
+.logo{font-weight:800;font-size:1.3rem;text-decoration:none}.logo b{color:var(--accent)}
+nav .links a{margin-left:20px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+nav .links a:hover{color:var(--accent)}
+.lang{margin-left:20px;border:1.5px solid var(--ink);background:none;border-radius:20px;padding:4px 12px;font-weight:700;cursor:pointer;font-family:inherit}
+.hero{padding:90px 5vw 80px;background:radial-gradient(circle at 85% 20%,#d9efef 0,transparent 45%),radial-gradient(circle at 10% 90%,#fdebd0 0,transparent 40%)}
+.wrap{max-width:1120px;margin:0 auto}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.pill{display:inline-block;background:#fff;border:1px solid #e1e8e8;border-radius:30px;padding:6px 14px;font-size:.85rem;font-weight:600;color:var(--accent)}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1;margin:18px 0;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 26px;border-radius:40px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,123,138,.25)}
+.btn.ghost{background:#fff;color:var(--ink);border:1.5px solid #d8dde2}
+.mock{background:#fff;border-radius:18px;box-shadow:0 30px 60px rgba(22,32,43,.15);overflow:hidden;transform:rotate(1.5deg)}
+.mock .bar{height:28px;background:#f0f0f0;display:flex;gap:6px;align-items:center;padding:0 12px}.mock .bar i{width:10px;height:10px;border-radius:50%;background:#ddd}
+.mock img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+section{padding:84px 5vw}
+.kicker{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin:8px 0 14px;letter-spacing:-.01em}
+.sub{color:var(--muted);max-width:640px;margin-bottom:36px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:#fff;border-radius:16px;padding:28px;border:1px solid #ebe8e1}
+.num{width:40px;height:40px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+.step h3{margin-bottom:6px}.step p{color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.demo{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #ebe8e1;text-decoration:none;transition:.2s;display:block}
+.demo:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
+.demo .img{aspect-ratio:16/10;background-size:cover;background-position:top center;position:relative}
+.demo .tag{position:absolute;top:12px;left:12px;background:rgba(22,32,43,.85);color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:20px}
+.demo .body{padding:18px 20px}.demo h3{font-size:1.1rem}.demo p{color:var(--muted);font-size:.92rem}
+.demo .go{color:var(--accent);font-weight:700;font-size:.9rem;margin-top:8px;display:inline-block}
+.note{font-size:.85rem;color:var(--muted);margin-top:16px}
+.pricing{background:var(--ink);color:#fff}
+.pricing .sub{color:#b9c3cc}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.plan{border-radius:18px;padding:34px;background:#1f2b38;border:1px solid #2c3a4a}
+.plan.main{background:#fff;color:var(--ink);border:3px solid var(--accent2)}
+.price{font-size:2.8rem;font-weight:800;margin:6px 0 4px}
+.plan ul{list-style:none;margin-top:16px}.plan li{padding:7px 0 7px 28px;position:relative}
+.plan li:before{content:"✓";position:absolute;left:0;color:var(--accent2);font-weight:800}
+.plan.main li:before{color:var(--accent)}
+.faq details{background:#fff;border:1px solid #ebe8e1;border-radius:12px;padding:18px 22px;margin-bottom:12px}
+.faq summary{font-weight:700;cursor:pointer}.faq p{color:var(--muted);margin-top:10px}
+.contact{background:var(--soft);text-align:center}
+.contact .box{max-width:640px;margin:0 auto}
+.mail{display:inline-block;margin-top:18px;font-size:1.25rem;font-weight:800;color:var(--accent);word-break:break-all}
+footer{padding:30px 5vw;text-align:center;color:var(--muted);font-size:.88rem}
+@media(max-width:860px){.hero .wrap,.plans{grid-template-columns:1fr}.steps,.gal{grid-template-columns:1fr}nav .links a.h{display:none}.mock{transform:none}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#top">Kalimera<b>Web</b></a>
+<div class="links"><a class="h" href="#how"><span data-l="el">Πώς λειτουργεί</span><span data-l="en">How it works</span></a><a class="h" href="#demos"><span data-l="el">Παραδείγματα</span><span data-l="en">Examples</span></a><a class="h" href="#pricing"><span data-l="el">Τιμή</span><span data-l="en">Price</span></a><a class="h" href="#contact"><span data-l="el">Επικοινωνία</span><span data-l="en">Contact</span></a><button class="lang" onclick="toggleLang()"><span data-l="el">EN</span><span data-l="en">ΕΛ</span></button></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<span class="pill"><span data-l="el">Για μικρές επιχειρήσεις στην Αθήνα</span><span data-l="en">For small businesses in Athens</span></span>
+<h1><span data-l="el">Η επιχείρησή σας αξίζει <em>τη δική της ιστοσελίδα</em>.</span><span data-l="en">Your business deserves <em>its own website</em>.</span></h1>
+<p class="lead"><span data-l="el">Ταβέρνα, καφέ, κουρείο ή κομμωτήριο; Σας φτιάχνουμε δωρεάν μια δοκιμαστική ιστοσελίδα για να τη δείτε πριν αποφασίσετε. Αν σας αρέσει, την ολοκληρώνουμε με €250.</span><span data-l="en">A taverna, café, barber or salon? We'll build you a free demo website so you can see it before you decide. If you like it, we finish it for €250.</span></p>
+<div class="cta"><a class="btn" href="#contact"><span data-l="el">Ζητήστε δωρεάν demo</span><span data-l="en">Get a free demo</span></a><a class="btn ghost" href="#demos"><span data-l="el">Δείτε παραδείγματα</span><span data-l="en">See examples</span></a></div>
+</div>
+<div class="mock"><div class="bar"><i></i><i></i><i></i></div><img src="assets/beeraki.jpg" alt="Demo website example / Παράδειγμα δοκιμαστικής ιστοσελίδας"></div>
+</div></header>
+
+<section id="how"><div class="wrap">
+<div class="kicker"><span data-l="el">Πώς λειτουργεί</span><span data-l="en">How it works</span></div>
+<h2><span data-l="el">Τρία απλά βήματα</span><span data-l="en">Three simple steps</span></h2>
+<p class="sub"><span data-l="el">Χωρίς δέσμευση και χωρίς προκαταβολή. Πληρώνετε μόνο αν σας αρέσει το αποτέλεσμα.</span><span data-l="en">No commitment and no upfront payment. You only pay if you like the result.</span></p>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3><span data-l="el">Μας γράφετε</span><span data-l="en">You write to us</span></h3><p><span data-l="el">Στείλτε μας το όνομα της επιχείρησης, τη διεύθυνση και ό,τι θέλετε να φαίνεται (ωράριο, μενού, υπηρεσίες).</span><span data-l="en">Send us your business name, address and anything you'd like shown (hours, menu, services).</span></p></div>
+<div class="step"><div class="num">2</div><h3><span data-l="el">Δωρεάν demo</span><span data-l="en">Free demo</span></h3><p><span data-l="el">Ετοιμάζουμε μια δοκιμαστική ιστοσελίδα και σας στέλνουμε τον σύνδεσμο για να τη δείτε στο κινητό σας.</span><span data-l="en">We prepare a demo website and send you the link to view it on your phone.</span></p></div>
+<div class="step"><div class="num">3</div><h3><span data-l="el">Την ολοκληρώνουμε</span><span data-l="en">We finish it</span></h3><p><span data-l="el">Αν σας αρέσει, προσθέτουμε τις φωτογραφίες σας, κάνουμε τις αλλαγές που θέλετε και την ανεβάζουμε.</span><span data-l="en">If you like it, we add your photos, make your changes and put it live.</span></p></div>
+</div></div></section>
+
+<section id="demos" style="background:#fff"><div class="wrap">
+<div class="kicker"><span data-l="el">Παραδείγματα</span><span data-l="en">Examples</span></div>
+<h2><span data-l="el">Δείγματα δοκιμαστικών ιστοσελίδων</span><span data-l="en">Sample demo websites</span></h2>
+<p class="sub"><span data-l="el">Δοκιμαστικές σελίδες που φτιάξαμε ως παραδείγματα, με δημόσια διαθέσιμα στοιχεία. Δεν είναι παραγγελίες πελατών ούτε επίσημες σελίδες των επιχειρήσεων.</span><span data-l="en">Demo pages we made as examples from publicly available details. They are not client projects or the businesses' official websites.</span></p>
+<div class="gal">
+<a class="demo" href="beeraki/" target="_blank" rel="noopener"><div class="img" style="background-image:url(assets/beeraki.jpg)"><span class="tag"><span data-l="el">Παράδειγμα demo</span><span data-l="en">Demo example</span></span></div><div class="body"><h3><span data-l="el">Μεζεδοπωλείο</span><span data-l="en">Meze restaurant</span></h3><p><span data-l="el">Ζωντανή μουσική, ωράριο, χάρτης, κουμπί κλήσης.</span><span data-l="en">Live music, hours, map, call button.</span></p><span class="go"><span data-l="el">Δείτε το demo →</span><span data-l="en">View demo →</span></span></div></a>
+<a class="demo" href="pites-tis-sofias/" target="_blank" rel="noopener"><div class="img" style="background-image:url(assets/pites-tis-sofias.jpg)"><span class="tag"><span data-l="el">Παράδειγμα demo</span><span data-l="en">Demo example</span></span></div><div class="body"><h3><span data-l="el">Πίτες & brunch</span><span data-l="en">Pie shop & brunch</span></h3><p><span data-l="el">Γεύσεις, delivery, ωράριο ανά ημέρα.</span><span data-l="en">Menu highlights, delivery, daily hours.</span></p><span class="go"><span data-l="el">Δείτε το demo →</span><span data-l="en">View demo →</span></span></div></a>
+<a class="demo" href="koureio-metaxas/" target="_blank" rel="noopener"><div class="img" style="background-image:url(assets/koureio-metaxas.jpg)"><span class="tag"><span data-l="el">Παράδειγμα demo</span><span data-l="en">Demo example</span></span></div><div class="body"><h3><span data-l="el">Κουρείο</span><span data-l="en">Barber shop</span></h3><p><span data-l="el">Υπηρεσίες, ωράριο, εύκολη επικοινωνία.</span><span data-l="en">Services, hours, easy contact.</span></p><span class="go"><span data-l="el">Δείτε το demo →</span><span data-l="en">View demo →</span></span></div></a>
+</div>
+<p class="note"><span data-l="el">Οι φωτογραφίες στα demo είναι ενδεικτικές (Unsplash).</span><span data-l="en">Photos in the demos are illustrative (Unsplash).</span></p>
+</div></section>
+
+<section id="pricing" class="pricing"><div class="wrap">
+<div class="kicker" style="color:var(--accent2)"><span data-l="el">Τιμή</span><span data-l="en">Price</span></div>
+<h2><span data-l="el">Απλή, σταθερή τιμή</span><span data-l="en">Simple, fixed price</span></h2>
+<p class="sub"><span data-l="el">Χωρίς κρυφές χρεώσεις. Το demo είναι πάντα δωρεάν.</span><span data-l="en">No hidden fees. The demo is always free.</span></p>
+<div class="plans">
+<div class="plan"><h3><span data-l="el">Δοκιμαστική ιστοσελίδα</span><span data-l="en">Demo website</span></h3><div class="price">€0</div><ul>
+<li><span data-l="el">Μία σελίδα με τα στοιχεία σας</span><span data-l="en">A one-page site with your details</span></li>
+<li><span data-l="el">Τη βλέπετε πριν αποφασίσετε</span><span data-l="en">See it before you decide</span></li>
+<li><span data-l="el">Καμία υποχρέωση</span><span data-l="en">No obligation</span></li></ul></div>
+<div class="plan main"><h3><span data-l="el">Ολοκληρωμένη ιστοσελίδα</span><span data-l="en">Finished website</span></h3><div class="price">€250</div><ul>
+<li><span data-l="el">Ελληνικά & αγγλικά</span><span data-l="en">Greek & English</span></li>
+<li><span data-l="el">Σωστή εμφάνιση σε κινητό</span><span data-l="en">Mobile-friendly</span></li>
+<li><span data-l="el">Χάρτης & κουμπί κλήσης</span><span data-l="en">Map & call button</span></li>
+<li><span data-l="el">Μενού ή υπηρεσίες</span><span data-l="en">Menu or services</span></li>
+<li><span data-l="el">Οι δικές σας φωτογραφίες</span><span data-l="en">Your own photos</span></li>
+<li><span data-l="el">Βοήθεια με το δικό σας domain</span><span data-l="en">Help with your own domain</span></li></ul>
+<div class="cta"><a class="btn" href="#contact"><span data-l="el">Ξεκινήστε με δωρεάν demo</span><span data-l="en">Start with a free demo</span></a></div></div>
+</div></div></section>
+
+<section class="faq"><div class="wrap" style="max-width:800px">
+<div class="kicker"><span data-l="el">Ερωτήσεις</span><span data-l="en">Questions</span></div>
+<h2><span data-l="el">Συχνές ερωτήσεις</span><span data-l="en">FAQ</span></h2>
+<details><summary><span data-l="el">Πληρώνω κάτι για το demo;</span><span data-l="en">Do I pay anything for the demo?</span></summary><p><span data-l="el">Όχι. Το demo είναι δωρεάν και δεν σας δεσμεύει.</span><span data-l="en">No. The demo is free and you're under no obligation.</span></p></details>
+<details><summary><span data-l="el">Τι χρειάζεστε από εμένα;</span><span data-l="en">What do you need from me?</span></summary><p><span data-l="el">Το όνομα, τη διεύθυνση, το τηλέφωνο, το ωράριο και, για την τελική σελίδα, μερικές φωτογραφίες και το μενού ή τις υπηρεσίες σας.</span><span data-l="en">Your name, address, phone and hours, and for the finished site a few photos and your menu or services.</span></p></details>
+<details><summary><span data-l="el">Η τιμή περιλαμβάνει το domain;</span><span data-l="en">Does the price include the domain?</span></summary><p><span data-l="el">Σας βοηθάμε να επιλέξετε και να συνδέσετε το δικό σας domain. Το κόστος του domain πληρώνεται απευθείας στον πάροχο.</span><span data-l="en">We help you choose and connect your own domain. The domain fee itself is paid directly to the registrar.</span></p></details>
+</div></section>
+
+<section id="contact" class="contact"><div class="box">
+<div class="kicker"><span data-l="el">Επικοινωνία</span><span data-l="en">Contact</span></div>
+<h2><span data-l="el">Ζητήστε το δωρεάν demo σας</span><span data-l="en">Request your free demo</span></h2>
+<p class="sub" style="margin:0 auto"><span data-l="el">Στείλτε μας email με το όνομα και τη διεύθυνση της επιχείρησής σας.</span><span data-l="en">Email us your business name and address.</span></p>
+<a class="mail" id="contact-email" href="mailto:CONTACT_EMAIL?subject=Free%20demo%20%2F%20%CE%94%CF%89%CF%81%CE%B5%CE%AC%CE%BD%20demo">CONTACT_EMAIL</a>
+</div></section>
+
+<footer>© 2026 Kalimera Web · <span data-l="el">Ιστοσελίδες για μικρές επιχειρήσεις στην Αθήνα</span><span data-l="en">Websites for small businesses in Athens</span></footer>
+<script>
+function toggleLang(){var h=document.documentElement,n=h.dataset.lang==='el'?'en':'el';h.dataset.lang=n;h.lang=n;try{localStorage.setItem('lang',n)}catch(e){}}
+try{var l=localStorage.getItem('lang');if(l){document.documentElement.dataset.lang=l;document.documentElement.lang=l}}catch(e){}
+</script>
+</body></html>
