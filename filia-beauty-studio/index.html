@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="el" data-lang="el">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Filia Beauty Studio · Demo</title>
+<link rel="preload" as="image" href="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf8f6;--ink:#2e2326;--accent:#a0505f;--soft:#f6e7e7;--dark:#2a1f22}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding-top:38px}
+html[data-lang=el] [data-l=en],html[data-lang=en] [data-l=el]{display:none}
+h1,h2,h3,.brand{font-family:'Cormorant Garamond',serif;line-height:1.15}
+a{color:inherit}
+.demobar{position:fixed;top:0;left:0;right:0;z-index:30;height:38px;line-height:20px;background:#111;color:#fff;text-align:center;font-size:.8rem;padding:9px 12px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demobar b{color:var(--soft)}
+nav{position:fixed;top:38px;left:0;right:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(0,0,0,.4);backdrop-filter:blur(8px);color:#fff}
+.brand{font-size:1.3rem;text-decoration:none}
+nav .links{display:flex;align-items:center;order:1;margin-left:auto}
+nav .ctrls{display:flex;align-items:center;order:2}
+nav .links a{margin-left:20px;text-decoration:none;font-size:.92rem;opacity:.9}
+.lang{margin-left:18px;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:20px;padding:10px 14px;line-height:1;cursor:pointer;font-weight:600;font-family:inherit;font-size:.85rem}
+.hero{min-height:88vh;display:flex;align-items:flex-end;padding:130px 5vw 70px;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.78)),url(img/hero.jpg) center/cover}
+.hero .in{max-width:720px}
+.tag{display:inline-block;background:var(--accent);color:#fff;padding:4px 14px;border-radius:30px;font-size:.82rem;letter-spacing:.04em;margin-bottom:16px}
+.hero h1{font-size:clamp(2.3rem,7vw,4.4rem);margin-bottom:14px}
+.hero p{font-size:1.1rem;opacity:.93;max-width:560px}
+.cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:40px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:0;font:inherit;font-weight:600;transition:.2s}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;border:2px solid currentColor}
+.btn[disabled]{opacity:.75;cursor:not-allowed;filter:grayscale(.4)}
+.btn small{font-weight:400;opacity:.85}
+section{padding:76px 5vw}
+.wrap{max-width:1100px;margin:0 auto}
+.kicker{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h2{font-size:clamp(1.7rem,4.5vw,2.6rem);margin:8px 0 20px}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.about img,.ph{width:100%;border-radius:18px;aspect-ratio:4/3;object-fit:cover}
+.about img{box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.about p{margin-bottom:14px;font-size:1.04rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;border-radius:16px;padding:26px;box-shadow:0 6px 24px rgba(0,0,0,.06);border-top:4px solid var(--accent)}
+.card .ic{font-size:1.9rem;margin-bottom:8px}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.alt{background:var(--soft)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px}
+.mi{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed rgba(0,0,0,.18)}
+.mi span.p{font-weight:600;white-space:nowrap;color:var(--accent)}
+.locked{position:relative;margin-top:8px;border-radius:16px;overflow:hidden}
+.locked .blur{filter:blur(5px);opacity:.55;pointer-events:none;user-select:none}
+.locked .over{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
+.locked .over div{background:var(--dark);color:#fff;padding:14px 22px;border-radius:40px;font-weight:600;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g{aspect-ratio:1/1;border-radius:14px;background-size:cover;background-position:center}
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:2px dashed rgba(0,0,0,.22);background:repeating-linear-gradient(45deg,rgba(0,0,0,.03) 0 12px,rgba(0,0,0,.06) 12px 24px);color:rgba(0,0,0,.55);font-size:.85rem;text-align:center;padding:12px}
+.g.ph{aspect-ratio:1/1;border-radius:14px}
+.ph .i{font-size:1.8rem}
+.quote{background:#fff;border-radius:16px;padding:26px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.quote p{font-style:italic}
+.quote .by{margin-top:10px;font-size:.85rem;opacity:.7;font-style:normal}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.stat{background:#fff;border-radius:40px;padding:8px 18px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+td{padding:9px 0;border-bottom:1px solid rgba(0,0,0,.08)} td:last-child{text-align:right;font-weight:600}
+.tbc{margin-top:14px;padding:16px 18px;border-radius:14px;background:var(--soft);border-left:4px solid var(--accent);font-weight:600}
+.tbc small{display:block;font-weight:400;opacity:.75;margin-top:4px}
+.info p{margin:6px 0}
+iframe{width:100%;height:100%;min-height:320px;border:0;border-radius:16px}
+footer{background:var(--dark);color:#ddd;padding:36px 5vw 70px;text-align:center;font-size:.9rem}
+footer .demo{margin-top:10px;opacity:.7;font-size:.82rem}
+.ribbon{position:fixed;bottom:16px;right:16px;z-index:20;background:#111;color:#fff;font-size:.78rem;padding:8px 14px;border-radius:30px;opacity:.88}
+.note{font-size:.84rem;opacity:.7;margin-top:12px}
+.wm{position:fixed;inset:0;z-index:25;pointer-events:none;overflow:hidden}
+.wm div{position:absolute;left:-50%;top:-50%;width:200%;height:200%;transform:rotate(-28deg);display:flex;flex-wrap:wrap;align-content:flex-start;gap:70px 90px;font:700 1.15rem Inter,sans-serif;color:rgba(0,0,0,.08);text-transform:uppercase;letter-spacing:.2em}
+.wm span{white-space:nowrap}
+.wm span:nth-child(odd){color:rgba(255,255,255,.12)}
+#visit .btn.ghost{color:var(--ink)}
+.menu-btn{display:none;margin-left:10px;white-space:nowrap;background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;border-radius:20px;padding:10px 14px;line-height:1;font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.mapbox{min-height:320px;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center;padding:24px;background:linear-gradient(135deg,var(--soft),#fff);border:1px solid rgba(0,0,0,.08)}
+.mapbox .pin{font-size:2.4rem}
+.mapbox button{cursor:pointer}
+.mapbox.loaded{padding:0;display:block}
+.credits{margin-top:14px;font-size:.74rem;opacity:.6;line-height:1.7}
+.credits a{text-decoration:underline}
+@media(max-width:820px){.menu-btn{display:inline-block}.lang{margin-left:0}nav .links{display:none}nav.open .links{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;margin:0;background:rgba(0,0,0,.9);padding:4px 6vw 12px;box-shadow:0 12px 24px rgba(0,0,0,.3)}nav.open .links a.hide{display:block;margin:0;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}nav.open .links a.hide:last-child{border-bottom:0}.gallery>:nth-child(3){grid-column:span 2;aspect-ratio:2/1}}
+@media(max-width:820px){.about,.visit,.menu{grid-template-columns:1fr}nav .links a.hide{display:none}.gallery{grid-template-columns:1fr 1fr}section{padding:60px 6vw}.demobar{font-size:.76rem}.demobar .more{display:none}}
+</style>
+</head>
+<body>
+<div class="demobar"><span data-l="el">Demo prepared for <b>Filia Beauty Studio</b><span class="more"> · Δοκιμαστική πρόταση ιστοσελίδας – δεν είναι η τελική έκδοση</span></span><span data-l="en">Demo prepared for <b>Filia Beauty Studio</b><span class="more"> · Website concept preview – not the finished site</span></span></div>
+<div class="wm" aria-hidden="true"><div><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span><span>Demo · Filia Beauty Studio</span></div></div>
+<nav id="sitenav"><a class="brand" href="#top">Filia</a><div class="ctrls"><button class="lang" type="button" onclick="toggleLang()" aria-label="English"><span data-l="el">EN</span><span data-l="en">ΕΛ</span></button><button class="menu-btn" type="button" onclick="toggleMenu()" aria-expanded="false" aria-controls="navlinks" aria-label="Μενού">☰ <span data-l="el">Μενού</span><span data-l="en">Menu</span></button></div><div class="links" id="navlinks"><a class="hide" href="#about"><span data-l="el">Σχετικά</span><span data-l="en">About</span></a><a class="hide" href="#services"><span data-l="el">Υπηρεσίες</span><span data-l="en">Services</span></a><a class="hide" href="#visit"><span data-l="el">Επικοινωνία</span><span data-l="en">Visit</span></a></div></nav>
+<header class="hero" id="top"><div class="in">
+<span class="tag"><span data-l="el">Νύχια · Φρύδια · Βλεφαρίδες · Καλλιθέα</span><span data-l="en">Nails · Brows · Lashes · Kallithea</span></span>
+<h1>Filia Beauty Studio</h1>
+<p><span data-l="el">Εκεί όπου η ομορφιά συναντά τη φροντίδα.</span><span data-l="en">Where beauty meets care.</span></p>
+<div class="cta"><button class="btn" disabled title="Demo"><span data-l="el">Κλείστε ραντεβού</span><span data-l="en">Book an appointment</span> <small>· demo</small></button><a class="btn ghost" href="tel:+302109570349"><span data-l="el">Καλέστε μας</span><span data-l="en">Call us</span> · 210 957 0349</a></div>
+</div></header>
+<section id="about"><div class="wrap about">
+<div><div class="kicker"><span data-l="el">Γνωρίστε μας</span><span data-l="en">About us</span></div><h2><span data-l="el">Ένα νέο στούντιο ομορφιάς στην Καλλιθέα</span><span data-l="en">A new beauty studio in Kallithea</span></h2>
+<p><span data-l="el">Από το 2025, στο Filia Beauty Studio φροντίζουμε νύχια, φρύδια και βλεφαρίδες με προσοχή στη λεπτομέρεια – από ημιμόνιμο και τεχνητά νύχια μέχρι lash lift και ημιμόνιμο μακιγιάζ φρυδιών.</span><span data-l="en">Since 2025, Filia Beauty Studio has been caring for nails, brows and lashes with an eye for detail – from gel polish and artificial nails to lash lifts and semi-permanent brow make-up (PMU).</span></p>
+<p><span data-l="el">Η ομάδα μας: η Φιλία, η Μαρία – τεχνικός νυχιών και προσώπου με αγάπη για το nail art – και η Ελεάννα.</span><span data-l="en">Our team: Filia, Maria – a nail and facial technician who loves nail art – and Eleanna.</span></p>
+<p><span data-l="el">Πληρωμή με μετρητά ή κάρτα · Μιλάμε αγγλικά.</span><span data-l="en">Cash or card accepted · English spoken.</span></p></div>
+<img src="img/nails.jpg" alt="" loading="lazy">
+</div></section>
+<section id="services" class="alt"><div class="wrap"><div class="kicker"><span data-l="el">Υπηρεσίες</span><span data-l="en">Services</span></div><h2><span data-l="el">Τι κάνουμε</span><span data-l="en">What we do</span></h2><div class="cards">
+<div class="card"><div class="ic">💅</div><h3><span data-l="el">Μανικιούρ & πεντικιούρ</span><span data-l="en">Manicure & pedicure</span></h3><p><span data-l="el">Περιποίηση, ημιμόνιμο, τεχνητά νύχια και nail art.</span><span data-l="en">Care, gel polish, artificial nails and nail art.</span></p></div>
+<div class="card"><div class="ic">✨</div><h3><span data-l="el">Φρύδια</span><span data-l="en">Brows</span></h3><p><span data-l="el">Καθαρισμός, σχήμα και brow lift.</span><span data-l="en">Tidy, shaping and brow lift.</span></p></div>
+<div class="card"><div class="ic">👁️</div><h3><span data-l="el">Βλεφαρίδες & πρόσωπο</span><span data-l="en">Lashes & face</span></h3><p><span data-l="el">Lash lift και αποτρίχωση προσώπου με κλωστή.</span><span data-l="en">Lash lift and facial threading.</span></p></div>
+<div class="card"><div class="ic">🖌️</div><h3><span data-l="el">Ημιμόνιμο μακιγιάζ</span><span data-l="en">Semi-permanent make-up (PMU)</span></h3><p><span data-l="el">Ημιμόνιμο μακιγιάζ φρυδιών, με συμβουλευτική συνάντηση πρώτα.</span><span data-l="en">Semi-permanent brow make-up (PMU), starting with a consultation.</span></p></div>
+</div></div></section>
+<section><div class="wrap"><div class="kicker"><span data-l="el">Τιμοκατάλογος</span><span data-l="en">Price list</span></div><h2><span data-l="el">Ενδεικτικές τιμές</span><span data-l="en">Sample prices</span></h2>
+<div class="menu"><div class="mi"><span><span data-l="el">Μανικιούρ – περιποίηση & ημιμόνιμο</span><span data-l="en">Manicure – care & gel polish</span></span><span class="p">€22</span></div><div class="mi"><span><span data-l="el">Μανικιούρ & πεντικιούρ ημιμόνιμο</span><span data-l="en">Manicure & pedicure, gel polish</span></span><span class="p"><span data-l="el">από €32</span><span data-l="en">from €32</span></span></div><div class="mi"><span><span data-l="el">Τεχνητά νύχια</span><span data-l="en">Artificial nails</span></span><span class="p"><span data-l="el">από €35</span><span data-l="en">from €35</span></span></div><div class="mi"><span><span data-l="el">Καθαρισμός & σχήμα φρυδιών</span><span data-l="en">Brow tidy & shape</span></span><span class="p">€15</span></div><div class="mi"><span><span data-l="el">Ημιμόνιμο μακιγιάζ φρυδιών – συμβουλευτική (1 ώρα)</span><span data-l="en">Semi-permanent brow make-up (PMU) – consultation (1 hour)</span></span><span class="p">€15</span></div></div>
+<div class="locked"><div class="blur"><div class="menu"><div class="mi"><span>Πεντικιούρ</span><span class="p">€ —</span></div><div class="mi"><span>Nail art</span><span class="p">€ —</span></div><div class="mi"><span>Nail extras</span><span class="p">€ —</span></div><div class="mi"><span>Lash lift & brow lift</span><span class="p">€ —</span></div><div class="mi"><span>Αποτρίχωση προσώπου με κλωστή</span><span class="p">€ —</span></div><div class="mi"><span>Αφαίρεση ημιμόνιμου</span><span class="p">€ —</span></div></div></div><div class="over"><div>🔒 <span data-l="el">Πλήρης τιμοκατάλογος στο τελικό site</span><span data-l="en">Full price list on the finished site</span></div></div></div>
+<p class="note"><span data-l="el">Τιμές όπως εμφανίζονται στο Treatwell (Οκτώβριος 2026) – προς επιβεβαίωση.</span><span data-l="en">Prices as listed on Treatwell (October 2026) – to be confirmed.</span></p></div></section>
+<section class="alt"><div class="wrap"><div class="kicker"><span data-l="el">Γκαλερί</span><span data-l="en">Gallery</span></div><h2><span data-l="el">Έμπνευση</span><span data-l="en">Inspiration</span></h2>
+<div class="gallery"><div class="g" style="background-image:url(img/care.jpg)"></div><div class="g ph"><span class="i">📷</span><span data-l="el">Φωτογραφίες από τη δουλειά σας</span><span data-l="en">Photos of your work</span></div><div class="g ph"><span class="i">📷</span><span data-l="el">Ο χώρος σας</span><span data-l="en">Your studio</span></div></div>
+<p class="note"><span data-l="el">Ενδεικτική φωτογραφία (Unsplash). Στο τελικό site: γκαλερί με τις δικές σας δημιουργίες.</span><span data-l="en">Illustrative photo (Unsplash). Finished site: gallery of your own work.</span></p></div></section>
+<section><div class="wrap"><div class="kicker"><span data-l="el">Κριτικές</span><span data-l="en">Reviews</span></div><h2><span data-l="el">Τι λένε οι πελάτισσες</span><span data-l="en">What clients say</span></h2>
+<div class="stats"><span class="stat">Google ★ 4,9 · 125</span><span class="stat">Treatwell ★ 4,9 · 56</span></div>
+<div class="quote"><p>“Υπέροχο κλίμα και ζεστοί άνθρωποι μέσα στον χώρο, η δουλειά τους είναι και γρήγορα και πανέμορφη 🌸”</p><div class="by">— <span data-l="el">Κριτική στο Treatwell, Οκτ. 2026</span><span data-l="en">Treatwell review, Oct 2026</span></div></div>
+<div class="locked"><div class="blur"><div class="cards"><div class="quote"><p>Lorem ipsum dolor sit amet consectetur.</p></div><div class="quote"><p>Lorem ipsum dolor sit amet consectetur.</p></div></div></div><div class="over"><div>🔒 <span data-l="el">Περισσότερες κριτικές στο τελικό site</span><span data-l="en">More reviews on the finished site</span></div></div></div>
+<p class="note"><span data-l="el">Βαθμολογίες όπως καταγράφηκαν τον Οκτώβριο 2026.</span><span data-l="en">Ratings as recorded in October 2026.</span></p></div></section>
+<section id="visit" class="alt"><div class="wrap visit">
+<div class="info"><div class="kicker"><span data-l="el">Επισκεφθείτε μας</span><span data-l="en">Visit us</span></div><h2><span data-l="el">Ωράριο & Επικοινωνία</span><span data-l="en">Hours & Contact</span></h2>
+<p>📍 Δημητρακοπούλου 36, 176 72 Καλλιθέα</p><p>📞 <a href="tel:+302109570349">210 957 0349</a></p><p>✉️ <a href="mailto:filialeont@gmail.com">filialeont@gmail.com</a></p>
+<table>
+<tr><td><span data-l="el">Τρίτη, Πέμπτη, Παρασκευή</span><span data-l="en">Tue, Thu, Fri</span></td><td>10:00 – 20:00</td></tr>
+<tr><td><span data-l="el">Τετάρτη</span><span data-l="en">Wednesday</span></td><td>10:00 – 18:00</td></tr>
+<tr><td><span data-l="el">Σάββατο</span><span data-l="en">Saturday</span></td><td>09:00 – 17:00</td></tr>
+<tr><td><span data-l="el">Κυριακή – Δευτέρα</span><span data-l="en">Sunday – Monday</span></td><td><span data-l="el">Κλειστά</span><span data-l="en">Closed</span></td></tr></table>
+<div class="cta"><button class="btn" disabled title="Demo"><span data-l="el">Κλείστε ραντεβού</span><span data-l="en">Book an appointment</span> <small>· demo</small></button></div></div>
+<div class="mapbox" data-src="https://www.google.com/maps?q=Filia%20Beauty%20Studio%2C%20%CE%94%CE%B7%CE%BC%CE%B7%CF%84%CF%81%CE%B1%CE%BA%CE%BF%CF%80%CE%BF%CF%8D%CE%BB%CE%BF%CF%85%2036%2C%20176%2072%20%CE%9A%CE%B1%CE%BB%CE%BB%CE%B9%CE%B8%CE%AD%CE%B1&output=embed" data-title="Χάρτης – Filia Beauty Studio / Map – Filia Beauty Studio"><span class="pin">📍</span><strong><span data-l="el">Χάρτης – Filia Beauty Studio</span><span data-l="en">Map – Filia Beauty Studio</span></strong><button class="btn" type="button" onclick="loadMap(this)"><span data-l="el">Φόρτωση χάρτη (Google Maps)</span><span data-l="en">Load map (Google Maps)</span></button></div>
+</div></section>
+<footer><div><strong>Filia Beauty Studio</strong> · Δημητρακοπούλου 36, 176 72 Καλλιθέα</div><div class="demo"><span data-l="el">Δοκιμαστική ιστοσελίδα που ετοιμάστηκε για</span><span data-l="en">Demo website prepared for</span> Filia Beauty Studio · <span data-l="el">Οι φωτογραφίες είναι ενδεικτικές (Unsplash).</span><span data-l="en">Photos are illustrative (Unsplash).</span></div><div class="credits"><span data-l="el">Φωτογραφίες</span><span data-l="en">Photos</span>: <a href="https://images.unsplash.com/photo-1604654894610-df63bc536371" target="_blank" rel="noopener">hero 1604654894610</a> · <a href="https://images.unsplash.com/photo-1519014816548-bf5fe059798b" target="_blank" rel="noopener">nails 1519014816548</a> · <a href="https://images.unsplash.com/photo-1590439471364-192aa70c0b53" target="_blank" rel="noopener">care 1590439471364</a> — <a href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash License</a></div></footer>
+<div class="ribbon"><span data-l="el">Δοκιμαστική έκδοση · Demo</span><span data-l="en">Demo preview</span></div>
+<script>
+function setLabel(){var el=document.documentElement.dataset.lang==='el';var b=document.querySelector('.lang');if(b)b.setAttribute('aria-label',el?'English':'Ελληνικά');var m=document.querySelector('.menu-btn');if(m)m.setAttribute('aria-label',el?'Μενού':'Menu')}
+function toggleLang(){var h=document.documentElement;var n=h.dataset.lang==='el'?'en':'el';h.dataset.lang=n;h.lang=n;setLabel();try{localStorage.setItem('lang',n)}catch(e){}}
+try{var l=localStorage.getItem('lang');if(l){document.documentElement.dataset.lang=l;document.documentElement.lang=l}}catch(e){}
+setLabel();
+function setMenu(o){document.querySelector('nav').classList.toggle('open',o);document.querySelector('.menu-btn').setAttribute('aria-expanded',o?'true':'false')}
+function toggleMenu(){setMenu(!document.querySelector('nav').classList.contains('open'))}
+document.querySelectorAll('nav .links a.hide').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&document.querySelector('nav').classList.contains('open')){setMenu(false);document.querySelector('.menu-btn').focus()}});
+function loadMap(b){var box=b.closest('.mapbox');var f=document.createElement('iframe');f.src=box.dataset.src;f.title=box.dataset.title;f.loading='lazy';box.innerHTML='';box.classList.add('loaded');box.appendChild(f)}
+</script>
+</body></html>
